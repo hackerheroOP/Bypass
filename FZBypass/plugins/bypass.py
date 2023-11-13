@@ -14,21 +14,21 @@ from FZBypass.core.exceptions import DDLException
 
 @Bypass.on_message(command('start'))
 async def start_msg(client, message):
-    await message.reply(f'''<b><i>FZ Bypass Bot!</i></b>
+    await message.reply(f'''<b><i>𝐏𝐑𝐎 𝐋𝐢𝐧𝐤 𝐁𝐲𝐩𝐚𝐬𝐬!</i></b>
     
     <i>A Powerful Elegant Multi Threaded Bot written in Python... which can Bypass Various Shortener Links, Scrape links, and More ... </i>
     
     <i><b>Bot Started {convert_time(time() - BOT_START)} ago...</b></i>
 
-🛃 <b>Use Me Here :</b> @CyberPunkGrp <i>(Bypass Topic)</i>''',
+🛃 <b>Use Me Here :</b> @leechx_grp ''',
         quote=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('🎓 Dev', url='https://t.me/SilentDemonSD'), InlineKeyboardButton('🔍 Deploy Own', url="https://github.com/SilentDemonSD/FZBypassBot")]
+            [InlineKeyboardButton('🎓 Dev', url='https://t.me/Pro_Morningstar'), InlineKeyboardButton('⚙️ 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲', url="https://telegram.me/Movies_Unloaded_Network")]
             ])
     )
 
 
-@Bypass.on_message(command(['bypass', 'bp']) & (user(Config.OWNER_ID) | chat_and_topics))
+@Bypass.on_message(command(['b','bypass', 'bp']) & (user(Config.OWNER_ID) | chat_and_topics))
 async def bypass_check(client, message):
     uid = message.from_user.id
     if (reply_to := message.reply_to_message) and (reply_to.text is not None or reply_to.caption is not None):
@@ -146,7 +146,7 @@ async def inline_query(client, query):
         answers.append(InlineQueryResultArticle(
                 title="♻️ Bypass Usage: In Line",
                 input_message_content=InputTextMessageContent(
-                    '''<b><i>FZ Bypass Bot!</i></b>
+                    '''<b><i>𝐏𝐑𝐎 𝐋𝐢𝐧𝐤 𝐁𝐲𝐩𝐚𝐬𝐬!</i></b>
     
     <i>A Powerful Elegant Multi Threaded Bot written in Python... which can Bypass Various Shortener Links, Scrape links, and More ... </i>
     
@@ -154,7 +154,7 @@ async def inline_query(client, query):
                 ),
                 description="Bypass via !bp [link]",
                 reply_markup=InlineKeyboardMarkup([
-                        [InlineKeyboardButton("FZ Channel", url="https://t.me/FXTorrentz"),
+                        [InlineKeyboardButton("⚙️ 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐫𝐬", url="https://t.me/Movies_Unloaded_Network"),
                         InlineKeyboardButton('Try Bypass', switch_inline_query_current_chat="!bp ")]
                 ])
             ))
